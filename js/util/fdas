@@ -1,0 +1,45 @@
+a = {
+   a:1,
+   b:2,
+   c:{
+        aa:11,
+        bb:22
+   }
+}
+
+b = shallowCopy(a)
+
+
+a.aa = 33;
+print(b.aa); // 33
+
+print(a == b)
+print(a == a)
+
+
+
+
+let b= {...a}
+a == b//false
+
+let b = a;   // a == b true
+let b= {...a}// a == b false
+
+console.log(b);
+
+{
+   a:1,
+   b:2,
+   c:{
+        aa:11,
+        bb:22
+        dd:33
+   }
+}
+
+let b = {....a}
+b.c.dd = 'cc'
+console.log(b.c.dd) //  cc
+console.log(a.c.dd)  // cc
+
+
